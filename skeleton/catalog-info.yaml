@@ -1,0 +1,21 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.name }}
+  description: |
+    ${{ values.description }}
+  tags:
+    - sample
+    - rhdh-adventure
+  links:
+    - title: Red Hat Developer Hub Website
+      url: https://developers.redhat.com/rhdh/overview
+    - title: Red Hat Developer Hub Documentation
+      url: https://access.redhat.com/documentation/en-us/red_hat_developer_hub/
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: library
+  lifecycle: experimental
+  owner: ${{ values.owner }}
