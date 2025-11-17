@@ -93,7 +93,6 @@ spec:
       if: ${{ parameters.gitType === "gitlab" }}
       action: publish:gitlab
       input:
-        description: ${{ parameters.description }}
         repoUrl: ${{ parameters.repoUrl }}?owner=${{ parameters.owner | parseEntityRef | pick('name') }}&repo=${{ parameters.name }}
         repoVisibility: public
         defaultBranch: main
